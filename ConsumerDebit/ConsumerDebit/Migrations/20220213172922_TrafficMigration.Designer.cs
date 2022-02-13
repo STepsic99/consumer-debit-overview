@@ -3,15 +3,17 @@ using System;
 using ConsumerDebit.Repository;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace ConsumerDebit.Migrations
 {
     [DbContext(typeof(ConsumerDebitDbContext))]
-    partial class ConsumerDebitDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220213172922_TrafficMigration")]
+    partial class TrafficMigration
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -46,35 +48,6 @@ namespace ConsumerDebit.Migrations
                     b.HasIndex("UserId");
 
                     b.ToTable("Traffics");
-
-                    b.HasData(
-                        new
-                        {
-                            ID = 1,
-                            Claims = 0,
-                            Date = new DateTime(2021, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Document = "Početno stanje",
-                            Owes = 580,
-                            UserId = "S00001"
-                        },
-                        new
-                        {
-                            ID = 2,
-                            Claims = 581,
-                            Date = new DateTime(2021, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Document = "Početno stanje",
-                            Owes = 0,
-                            UserId = "S00002"
-                        },
-                        new
-                        {
-                            ID = 3,
-                            Claims = 0,
-                            Date = new DateTime(2021, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Document = "Početno stanje",
-                            Owes = 1154,
-                            UserId = "S00003"
-                        });
                 });
 
             modelBuilder.Entity("ConsumerDebit.Model.User", b =>
