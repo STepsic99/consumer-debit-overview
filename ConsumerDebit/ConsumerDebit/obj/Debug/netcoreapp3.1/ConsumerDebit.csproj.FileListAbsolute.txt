@@ -40,4 +40,11 @@ C:\Users\Home\Desktop\ConsumerDebitOverview\consumer-debit-overview\ConsumerDebi
 C:\Users\Home\Desktop\ConsumerDebitOverview\consumer-debit-overview\ConsumerDebit\ConsumerDebit\obj\Debug\netcoreapp3.1\ConsumerDebit.dll
 C:\Users\Home\Desktop\ConsumerDebitOverview\consumer-debit-overview\ConsumerDebit\ConsumerDebit\obj\Debug\netcoreapp3.1\ConsumerDebit.pdb
 C:\Users\Home\Desktop\ConsumerDebitOverview\consumer-debit-overview\ConsumerDebit\ConsumerDebit\obj\Debug\netcoreapp3.1\ConsumerDebit.genruntimeconfig.cache
-C:\Users\Home\Desktop\ConsumerDebitOverview\consumer-debit-overview\ConsumerDebit\ConsumerDebit\obj\Debug\netcoreapp3.1\ConsumerDebit.csproj.AssemblyReference.cache
+C:\Users\Home\Desktop\ConsumerDebitOverview\consumer-debit-overview\ConsumerDebit\ConsumerDebit\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Home\Desktop\ConsumerDebitOverview\consumer-debit-overview\ConsumerDebit\ConsumerDebit\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Home\Desktop\ConsumerDebitOverview\consumer-debit-overview\ConsumerDebit\ConsumerDebit\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+C:\Users\Home\Desktop\ConsumerDebitOverview\consumer-debit-overview\ConsumerDebit\ConsumerDebit\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Home\Desktop\ConsumerDebitOverview\consumer-debit-overview\ConsumerDebit\ConsumerDebit\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Home\Desktop\ConsumerDebitOverview\consumer-debit-overview\ConsumerDebit\ConsumerDebit\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Home\Desktop\ConsumerDebitOverview\consumer-debit-overview\ConsumerDebit\ConsumerDebit\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\Home\Desktop\ConsumerDebitOverview\consumer-debit-overview\ConsumerDebit\ConsumerDebit\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll

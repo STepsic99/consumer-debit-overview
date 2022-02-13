@@ -17,7 +17,7 @@
 <script>
 // @ is an alias to /src
 
-
+import axios from "axios";
 export default {
   name: 'Home',
   components: {
@@ -31,8 +31,15 @@ export default {
   },
   methods:{
     signIn:function(){
-      console.log(this.username)
-      this.$router.push('/about');
+      axios
+        .post("http://localhost:59666/api/users/login", {"username":this.username, "password":this.password})
+        .then((response) =>{
+          window.sessionStorage.setItem("jwt", response.data)
+         // window.sessionStorage.setItem("role", response.data.role)
+          this.$router.push('/about');
+        }).catch(err => {
+              alert(response.data)
+          });
     }
   }
 }

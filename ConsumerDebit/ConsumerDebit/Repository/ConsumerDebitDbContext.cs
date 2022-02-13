@@ -13,6 +13,16 @@ namespace ConsumerDebit.Repository
 
         public DbSet<Traffic> Traffics { get; set; }
 
+        public ConsumerDebitDbContext()
+        {
+
+        }
+
+        protected override void OnConfiguring(Microsoft.EntityFrameworkCore.DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseNpgsql("Server=localhost;Port=5432;Database=consumerCard;User Id=postgres;Password=admin");
+        }
+
         public ConsumerDebitDbContext(DbContextOptions<ConsumerDebitDbContext> options) : base(options) { }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
