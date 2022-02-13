@@ -48,3 +48,4 @@ C:\Users\Home\Desktop\ConsumerDebitOverview\consumer-debit-overview\ConsumerDebi
 C:\Users\Home\Desktop\ConsumerDebitOverview\consumer-debit-overview\ConsumerDebit\ConsumerDebit\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
 C:\Users\Home\Desktop\ConsumerDebitOverview\consumer-debit-overview\ConsumerDebit\ConsumerDebit\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
 C:\Users\Home\Desktop\ConsumerDebitOverview\consumer-debit-overview\ConsumerDebit\ConsumerDebit\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Home\Desktop\ConsumerDebitOverview\consumer-debit-overview\ConsumerDebit\ConsumerDebit\obj\Debug\netcoreapp3.1\ConsumerDebit.csproj.AssemblyReference.cache

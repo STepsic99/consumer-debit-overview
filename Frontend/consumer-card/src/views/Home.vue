@@ -34,11 +34,11 @@ export default {
       axios
         .post("http://localhost:59666/api/users/login", {"username":this.username, "password":this.password})
         .then((response) =>{
-          window.sessionStorage.setItem("jwt", response.data)
+          window.sessionStorage.setItem("jwt", response.data.token)
          // window.sessionStorage.setItem("role", response.data.role)
           this.$router.push('/about');
         }).catch(err => {
-              alert(response.data)
+              alert(err.response.data)
           });
     }
   }
