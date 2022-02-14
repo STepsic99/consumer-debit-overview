@@ -22,7 +22,8 @@
   </tbody>
   </table><br>
   <button type="submit" class="btn btn-primary" v-on:click="signOut()">Odjavi se</button>
-
+  <br>
+  <br>
   </div>
 </template>
 
