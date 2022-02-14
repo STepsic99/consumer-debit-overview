@@ -2,6 +2,7 @@
 using ConsumerDebit.Model;
 using ConsumerDebit.Repository;
 using ConsumerDebit.Service;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
@@ -21,6 +22,7 @@ namespace ConsumerDebit.Controllers
     public class UsersController : ControllerBase
     {
         UsersService usersService = new UsersService(new UsersRepository());
+        TrafficsService trafficsService = new TrafficsService(new TrafficsRepository());
         private IConfiguration _config;
 
         public UsersController(IConfiguration config)
@@ -32,7 +34,7 @@ namespace ConsumerDebit.Controllers
         public IActionResult Login(LoginDto dto)
         {
             User user = AuthenticateUser(dto.Username, dto.Password);
-            if(user==null) return BadRequest("User doesn't exist");
+            if(user==null) return BadRequest("Korisnik ne postoji.");
             var tokenStr = GenerateJSONWebToken(user);
             return Ok(new { token = tokenStr });
         }
@@ -63,6 +65,26 @@ namespace ConsumerDebit.Controllers
 
             var encodetoken = new JwtSecurityTokenHandler().WriteToken(token);
             return encodetoken;
+        }
+
+        [Authorize]
+        [HttpGet("traffic")]
+        public IActionResult GetTraffic()
+        {
+            var identity = HttpContext.User.Identity as ClaimsIdentity;
+            IList<Claim> claim = identity.Claims.ToList();
+            String userId = claim[1].Value;
+            return Ok(trafficsService.GetAllTrafficForUser(userId));
+        }
+
+        [Authorize]
+        [HttpGet]
+        public IActionResult GetUsername()
+        {
+            var identity = HttpContext.User.Identity as ClaimsIdentity;
+            IList<Claim> claim = identity.Claims.ToList();
+            String username = claim[0].Value;
+            return Ok(username);
         }
     }
 }

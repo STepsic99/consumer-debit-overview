@@ -1,6 +1,6 @@
 <template>
-  <div style="max-width:50%; text-align: center;margin: auto; margin-top:10% ">
-  
+  <div style="max-width:50%; text-align: center;margin: auto; margin-top:2% ">
+  <h1 style="margin-bottom:5%">Prijava</h1>
   <div  class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Korisničko ime</label>
     <input v-model="username" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
@@ -36,7 +36,7 @@ export default {
         .then((response) =>{
           window.sessionStorage.setItem("jwt", response.data.token)
          // window.sessionStorage.setItem("role", response.data.role)
-          this.$router.push('/about');
+          this.$router.push('/card');
         }).catch(err => {
               alert(err.response.data)
           });

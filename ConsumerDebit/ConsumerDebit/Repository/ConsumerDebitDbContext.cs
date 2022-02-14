@@ -36,7 +36,9 @@ namespace ConsumerDebit.Repository
             modelBuilder.Entity<Traffic>().HasData(
                 new Traffic { ID = 1, UserId = "S00001", Date = new DateTime(2021,1,1), Document= "Početno stanje", Owes= 580, Claims = 0 },
                 new Traffic { ID = 2, UserId = "S00002", Date = new DateTime(2021, 1, 1), Document = "Početno stanje", Owes = 0, Claims = 581 },
-                new Traffic { ID = 3, UserId = "S00003", Date = new DateTime(2021, 1, 1), Document = "Početno stanje", Owes = 1154, Claims = 0 }
+                new Traffic { ID = 3, UserId = "S00003", Date = new DateTime(2021, 1, 1), Document = "Početno stanje", Owes = 1154, Claims = 0 },
+                new Traffic { ID = 4, UserId = "S00001", Date = new DateTime(2021, 1, 31), Document = "Zaduzenje", Owes = 200, Claims = 0 },
+                new Traffic { ID = 5, UserId = "S00001", Date = new DateTime(2021, 1, 31), Document = "Zaduzenje", Owes = 180, Claims = 0 }
             );
         }
     }

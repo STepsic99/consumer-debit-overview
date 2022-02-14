@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -15,5 +16,8 @@ namespace ConsumerDebit.Model
 
         public string UserId { get; set; }
         public User User { get; set; }
+
+        [NotMapped]
+        public int Saldo { get; set; }
     }
 }
